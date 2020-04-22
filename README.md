@@ -1,6 +1,8 @@
 ## SPADNet
 SPADNet: Deep RGB-SPAD Sensor Fusion Assisted by Monocular Depth Estimation. 
+
 Created by Zhanghao Sun, David Brian Lindell, [Olav Solgaard] and [Gordon Wetzstein] from Stanford University.
+
 **We will make code and pre-trained models public soon.**
 
 [Olav Solgaard]: https://solgaardlab.stanford.edu/#research
