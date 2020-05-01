@@ -1,5 +1,8 @@
 ## SPADNet
-SPADnet: Deep RGB-SPAD Sensor Fusion Assisted by Monocular Depth Estimation. 
+[SPADnet: Deep RGB-SPAD Sensor Fusion Assisted by Monocular Depth Estimation]. 
+
+[SPADnet: Deep RGB-SPAD Sensor Fusion Assisted by Monocular Depth Estimation]: https://www.osapublishing.org/oe/abstract.cfm?uri=oe-28-10-14948
+
 
 Created by Zhanghao Sun, David Brian Lindell, [Olav Solgaard] and [Gordon Wetzstein] from Stanford University.
 
