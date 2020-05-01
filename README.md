@@ -25,7 +25,7 @@ If you find our work useful in your research, please consider citing:
 
 
 ## Training
-We use Python 3. , Pytorch , CUDA for our experiments. To install the environment, we can import from "environment.yml" using conda.
+We use Python 3. , Pytorch , CUDA for our experiments. One can install the environment from "environment.yml" using conda.
 
 The model is trained for 5 epochs, which takes around 24hrs.
 **Pre-trained model is made public here** (MB)
