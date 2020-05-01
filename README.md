@@ -22,6 +22,8 @@ For more details of our work, please refer to our technical paper.
 
 ## Training
 
+**Pre-trained model is made public here** (MB)
+
 ## Evaluation
 ### Simulated Dataset
 ### Real-world Captured Dataset
