@@ -24,10 +24,21 @@ For more details of our work, please refer to our technical paper.
 If you find our work useful in your research, please consider citing:
 
 
-## Training
+## Installation
 We use Python 3.6 , Pytorch 1.0 and CUDA 9.0 for our experiments. One can install the conda environment from "environment.yml".
 
-The model is trained for 5 epochs, which takes around 24hrs. You can find our pre-trained model [Here] (MB)
+## Training
+### Preparing data
+We use [NYUV2] dataset for SPAD measurement simulation. We select out data with high quality (without large holes in ground truth depth map, with reasonable reflectivity value and so on), which are separated into training set, validation set and test set (10:1:1). Corresponding scene index are listed in "util/train_clean.txt", "util/val_clean.txt" and "util/test_clean.txt".
+
+To generate SPAD measurement simulation, we generate 
+We first generate monocular depth estimation .
+We also provide [real-world captured SPAD data] for three different scenes.
+
+We also provide a pre-trained snapshot of SPADnet model. It is trained for 5 epochs, which takes around 24hrs. You can find it [Here] (12.5MB). Note that this model dose not contain pre-trained monocular depth estimators.
+
+[real-world captured SPAD data]: 
+[NYUV2]: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 [Here]: https://drive.google.com/file/d/1KDzbRpT_HA0Y0lEtPabKKlUhgcQ40FWr/view?usp=sharing
 
 ## Evaluation
