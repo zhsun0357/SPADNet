@@ -29,7 +29,11 @@ We use Python 3.6 , Pytorch 1.0 and CUDA 9.0 for our experiments. One can instal
 
 ## Training
 ### Preparing data
-We use [NYUV2] dataset for SPAD measurement simulation. We select out data with high quality (without large holes in ground truth depth map, with reasonable reflectivity value and so on), which are separated into training set, validation set and test set (10:1:1). Corresponding scene index are listed in "util/train_clean.txt", "util/val_clean.txt" and "util/test_clean.txt".
+To prepare data for training and evaluation, one can run:
+
+    sh scripts/command_prepare_data.sh
+    
+The data preparation process contains SPAD simualtion and corresponding monocular depth estimation. We use [NYUV2] dataset for SPAD measurement simulation. We select out data with high quality (without large holes in ground truth depth map, with reasonable reflectivity value and so on), which are separated into training set, validation set and test set (10:1:1). Corresponding scene index are listed in "util/train_clean.txt", "util/val_clean.txt" and "util/test_clean.txt".
 
 To simulate SPAD measurements, we use NYUV2 toolkit and code from [Lindell et al., 2018]. A signal-background ratio (SBR) needs to be specified for simulation. We always use the lowest SBR (2 signal photons and 50 background photons) during experiments and observed good generalization capability to complicated real-world scenes.
 
