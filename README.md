@@ -47,7 +47,7 @@ One can train SPADnet model from scratch by running:
     sh scripts/command_train.sh
 after both SPAD simulation and corresponding monocular depth estimations are completed. We use Adam Optimizer, with a learning rate of 1e-4 and learning rate decay of 0.5 after each epoch. The whole training process has 5 epochs and would take around 24hrs on Nvidia Titan V GPU (12GB).
 
-We also provide a pre-trained snapshot of SPADnet model [Here] (12.5MB).
+We also provide a pre-trained snapshot of SPADnet model in "pth" folder (12.5MB).
 
 [NYUV2]: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 [Here]: https://drive.google.com/file/d/1KDzbRpT_HA0Y0lEtPabKKlUhgcQ40FWr/view?usp=sharing
