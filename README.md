@@ -25,22 +25,36 @@ If you find our work useful in your research, please consider citing:
 
 
 ## Installation
-We use Python 3.6 , Pytorch 1.0 and CUDA 9.0 for our experiments. One can install the conda environment from "environment.yml".
+We use Python 3.6 , Pytorch 1.0 and CUDA 9.0 for our experiments. One can install our conda environment from "environment.yml".
 
 ## Training
 ### Preparing data
 We use [NYUV2] dataset for SPAD measurement simulation. We select out data with high quality (without large holes in ground truth depth map, with reasonable reflectivity value and so on), which are separated into training set, validation set and test set (10:1:1). Corresponding scene index are listed in "util/train_clean.txt", "util/val_clean.txt" and "util/test_clean.txt".
 
-To generate SPAD measurement simulation, we generate 
-We first generate monocular depth estimation .
-We also provide [real-world captured SPAD data] for three different scenes.
+To simulate SPAD measurements, we use NYUV2 toolkit and code from [Lindell et al., 2018]. A signal-background ratio (SBR) needs to be specified for simulation. We always use the lowest SBR (2 signal photons and 50 background photons) during experiments and observed good generalization capability to complicated real-world scenes.
 
-We also provide a pre-trained snapshot of SPADnet model. It is trained for 5 epochs, which takes around 24hrs. You can find it [Here] (12.5MB). Note that this model dose not contain pre-trained monocular depth estimators.
+Our scripts directly load monocular estimation results. We use [DORN] model as monocular estimation network for most part of the work and [here] we provide corresponding estimation results. Users can replace them with any other preliminary depth estimations.
+[Lindell et al., 2018]: http://www.computationalimaging.org/publications/single-photon-3d-imaging-with-deep-sensor-fusion/
+[here]: 
 
-[real-world captured SPAD data]: 
+### Model training
+One can train SPADnet model from scratch by running:
+sh scripts/command_train.sh
+after both SPAD simulation and corresponding monocular depth estimations are completed. We use Adam Optimizer, with a learning rate of 1e-4 and learning rate decay of 0.5 after each epoch. The whole training process has 5 epochs and would take around 24hrs on Nvidia Titan V GPU (12GB).
+
+We also provide a pre-trained snapshot of SPADnet model [Here] (12.5MB).
+
 [NYUV2]: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
 [Here]: https://drive.google.com/file/d/1KDzbRpT_HA0Y0lEtPabKKlUhgcQ40FWr/view?usp=sharing
 
 ## Evaluation
 ### Simulated Dataset
+One can evaluate SPADnet model on simulated NYUV2 dataset by running:
+sh scripts/command_eval.sh
+
 ### Real-world Captured Dataset
+We also evaluate our model on real-world captured SPAD data. We provide SPAD measurements as well as scaled monocular depth estimations for three different scenes [Here]. For monocular estimations, we provide the results from two SOTA networks: [DenseDepth] and [DORN].
+[Here]: 
+[DenseDepth]: https://arxiv.org/abs/1812.11941
+[DORN]: http://openaccess.thecvf.com/content_cvpr_2018/html/Fu_Deep_Ordinal_Regression_CVPR_2018_paper.html
+
