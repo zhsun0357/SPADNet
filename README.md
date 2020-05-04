@@ -50,7 +50,8 @@ We also provide a pre-trained snapshot of SPADnet model [Here] (12.5MB).
 ## Evaluation
 ### Simulated Dataset
 One can evaluate SPADnet model on simulated NYUV2 dataset by running:
-sh scripts/command_eval.sh
+    
+    sh scripts/command_eval.sh
 
 ### Real-world Captured Dataset
 We also evaluate our model on real-world captured SPAD data. We provide SPAD measurements as well as scaled monocular depth estimations for three different scenes [Here]. For monocular estimations, we provide the results from two SOTA networks: [DenseDepth] and [DORN].
