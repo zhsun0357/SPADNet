@@ -39,7 +39,8 @@ Our scripts directly load monocular estimation results. We use [DORN] model as m
 
 ### Model training
 One can train SPADnet model from scratch by running:
-sh scripts/command_train.sh
+    
+    sh scripts/command_train.sh
 after both SPAD simulation and corresponding monocular depth estimations are completed. We use Adam Optimizer, with a learning rate of 1e-4 and learning rate decay of 0.5 after each epoch. The whole training process has 5 epochs and would take around 24hrs on Nvidia Titan V GPU (12GB).
 
 We also provide a pre-trained snapshot of SPADnet model [Here] (12.5MB).
