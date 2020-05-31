@@ -764,4 +764,3 @@ dining_room_0030/spad_0301_nl9.mat
 dining_room_0013/spad_0241_nl9.mat
 living_room_0012/spad_0671_nl9.mat
 living_room_0045/spad_0511_nl9.mat
-office_0015/spad_0841_nl9.mat

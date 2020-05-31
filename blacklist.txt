@@ -9076,3 +9076,5 @@ study_0008/spad_0111.mat
 study_0008/spad_0121.mat
 study_0008/spad_0131.mat
 study_0008/spad_0141.mat
+living_room_0001a/spad_0001.mat
+dining_room_0001a/spad_0001.mat
