@@ -45,7 +45,7 @@ Our scripts directly load monocular estimation results. We use [DORN] model as m
 ### Model training
 One can train SPADnet model from scratch by running:
     
-    sh scripts/command_train.sh
+    python train_spadnet.py
     
 after both SPAD simulation and corresponding monocular depth estimations are completed. We use Adam Optimizer, with a learning rate of 1e-4 and learning rate decay of 0.5 after each epoch. The whole training process has 5 epochs and would take around 24hrs on Nvidia Titan V GPU (12GB).
 
@@ -58,7 +58,7 @@ We also provide a pre-trained snapshot of SPADnet model in "pth" folder (12.5MB)
 ### Simulated Dataset
 One can evaluate SPADnet model on simulated NYUV2 dataset by running:
     
-    sh scripts/command_eval.sh
+    python evaluate_spadnet.py
 
 ### Real-world Captured Dataset
 We also evaluate our model on real-world captured SPAD data. We provide SPAD measurements as well as scaled monocular depth estimations for three different scenes [Here]. For monocular estimations, we provide the results from two SOTA networks: [DenseDepth] and [DORN].
