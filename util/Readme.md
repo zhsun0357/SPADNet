@@ -5,5 +5,5 @@ Organize the downloaded and processed data as follows:
       + spad_XXX_nlX.mat
   - mono_nyuv2
     * scene folders (ex. "home_office_0011")
-      + XXX_pred.mat
-      + XXX_truth.mat
+      + XXX_pred.png
+      + XXX_truth.png
