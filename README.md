@@ -45,7 +45,7 @@ To prepare data for training and evaluation, one can run:
     
 The data preparation process contains SPAD simualtion and corresponding monocular depth estimation. We use [NYUV2] dataset for SPAD measurement simulation. We select out data with high quality (without large holes in ground truth depth map, with reasonable reflectivity value and so on), which are separated into training set, validation set and test set (10:1:1). Corresponding scene index are listed in "util/train_clean.txt", "util/val_clean.txt" and "util/test_clean.txt".
 
-To simulate SPAD measurements, we adapted code from NYUV2 toolkit and code from [Lindell et al., 2018]. A signal-background ratio (SBR) needs to be specified for simulation. We always use the lowest SBR (2 signal photons and 50 background photons) during experiments and observed good generalization capability to complicated real-world scenes.
+To simulate SPAD measurements, we adapted code from NYUV2 toolkit and code from [Lindell et al., 2018]. The signal-background ratio (SBR) needs to be specified for simulation. We always use the lowest SBR (level 9, which corresponds to 2 signal photons and 50 background photons) during experiments and observed good generalization capability to complicated real-world scenes.
 
 Our scripts directly load monocular estimation results. We use [DORN] model as monocular estimation network for most part of the work and [here] we provide corresponding estimation results. Users can replace them with any other preliminary depth estimations.
 
@@ -62,7 +62,6 @@ after both SPAD simulation and corresponding monocular depth estimations are com
 We also provide a pre-trained snapshot of SPADnet model in "pth" folder (12.5MB).
 
 [NYUV2]: https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html
-[Here]: https://drive.google.com/file/d/1KDzbRpT_HA0Y0lEtPabKKlUhgcQ40FWr/view?usp=sharing
 
 ## Evaluation
 ### Simulated Dataset
