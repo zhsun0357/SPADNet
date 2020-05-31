@@ -161,7 +161,7 @@ def process_denoise(opt, model, val_loader, n_iter, model_name='SPADnet'):
 
         batchsize, _, H, W = depth_var.size()
         mono_pred_var = mono_pred_var.view(batchsize, 1, H, W)
-
+        pdb.set_trace()
         ## patch size. Use 128x128 patches, with overlapping (64 step size)
         dim1 = 128
         dim2 = 128
@@ -215,6 +215,7 @@ def main():
     for p in model.parameters():
         p.requires_grad = False
 
+    pdb.set_trace()
     print('=> Loading checkpoint {}'.format(opt['checkpoint'][0]))
     ckpt = torch.load(opt['checkpoint'][0])
     model_dict = model.state_dict()
@@ -229,7 +230,7 @@ def main():
     
     model.load_state_dict(model_dict)
 
-    
+    pdb.set_trace()
     ################# Dataset loading #################
     val_dataset = \
     SpadDataset(opt['test_files'], opt['ckpt_noise_param_idx'],
