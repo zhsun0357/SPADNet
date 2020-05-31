@@ -23,6 +23,16 @@ For more details of our work, please refer to our technical paper.
 ## Citation
 If you find our work useful in your research, please consider citing:
 
+        @article{sun2020spadnet,
+          title={SPADnet: deep RGB-SPAD sensor fusion assisted by monocular depth estimation},
+          author={Sun, Zhanghao and Lindell, David B and Solgaard, Olav and Wetzstein, Gordon},
+          journal={Optics Express},
+          volume={28},
+          number={10},
+          pages={14948--14962},
+          year={2020},
+          publisher={Optical Society of America}
+        }
 
 ## Installation
 We use Python 3.6 , Pytorch 1.0 and CUDA 9.0 for our experiments. One can install our conda environment from "environment.yml".
@@ -59,6 +69,8 @@ We also provide a pre-trained snapshot of SPADnet model in "pth" folder (12.5MB)
 One can evaluate SPADnet model on simulated NYUV2 dataset by running:
     
     python evaluate_spadnet.py
+
+This will create a .json file that contains all metrices of evaluated model.
 
 ### Real-world Captured Dataset
 We also evaluate our model on real-world captured SPAD data. We provide SPAD measurements as well as scaled monocular depth estimations for three different scenes [Here]. For monocular estimations, we provide the results from two SOTA networks: [DenseDepth] and [DORN].
