@@ -25,6 +25,8 @@ import configparser
 from configparser import ConfigParser
 from model_spadnet import ORLoss, SPADnet
 
+import pdb
+
 cudnn.benchmark = True
 dtype = torch.cuda.FloatTensor
 
@@ -173,7 +175,7 @@ def evaluate(model, val_loader, n_iter, model_name='SPADnet'):
 
 
 def train(model, train_loader, val_loader, optimizer, n_iter,
-          lambda_tv, epoch, logfile, val_every=10, save_every=100,
+          lambda_tv, epoch, logfile, val_every=5, save_every=10,
           model_name='SPADnet'):
 
     for sample in tqdm(train_loader):
@@ -365,7 +367,7 @@ def main():
     else:
         print('=> Using default Adam optimizer')
         optimizer = torch.optim.Adam(params, opt['lr'])
-
+    
     # datasets and dataloader
     train_dataset = \
         SpadDataset(opt['train_files'], opt['noise_param_idx'], 

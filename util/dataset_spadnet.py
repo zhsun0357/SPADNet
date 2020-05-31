@@ -10,6 +10,8 @@ import imageio
 import re
 import os
 
+import pdb
+
 class ToTensor(object):
     """Crop randomly the image in a sample."""
 
@@ -124,7 +126,9 @@ class SpadDataset(torch.utils.data.Dataset):
             file_nl = re.search('nl\d+.mat', file).group()
             file_nl = file_nl.replace('nl', '')
             file_nl = int(file_nl.replace('.mat', ''))
-            if (not (file in self.blacklist)) and (file_nl == self.nl):
+            file_idx = file.replace('_nl{}.mat'.format(file_nl), '')
+
+            if (not (file_idx in self.blacklist)) and (file_nl == self.nl):
                 file = self.spad_datapath + file
                 self.spad_files.append(file)
         self.transform = transform
