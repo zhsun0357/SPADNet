@@ -70,10 +70,3 @@ One can evaluate SPADnet model on simulated NYUV2 dataset by running:
     python evaluate_spadnet.py
 
 This will create a .json file that contains all metrices of evaluated model.
-
-### Real-world Captured Dataset
-We also evaluate our model on real-world captured SPAD data. We provide SPAD measurements as well as scaled monocular depth estimations for three different scenes [Here]. For monocular estimations, we provide the results from two SOTA networks: [DenseDepth] and [DORN].
-[Here]: 
-[DenseDepth]: https://arxiv.org/abs/1812.11941
-[DORN]: http://openaccess.thecvf.com/content_cvpr_2018/html/Fu_Deep_Ordinal_Regression_CVPR_2018_paper.html
-
