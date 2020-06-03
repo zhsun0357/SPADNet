@@ -54,6 +54,7 @@ One can train SPADnet model from scratch by running:
     python train_spadnet.py
     
 after both SPAD simulation and corresponding monocular depth estimations are completed. We use Adam Optimizer, with a learning rate of 1e-4 and learning rate decay of 0.5 after each epoch. The whole training process has 5 epochs and would take around 24hrs on Nvidia Titan V GPU (12GB).
+You can easily change hyper-parameters and input/output file directories in "config.ini"
 
 We also provide a pre-trained snapshot of SPADnet model in "pth" folder (12.5MB).
 
@@ -66,3 +67,4 @@ One can evaluate SPADnet model on simulated NYUV2 dataset by running:
     python evaluate_spadnet.py
 
 This will create a .json file that contains all metrices of evaluated model.
+You can change hyper-parameters and input/output file directories in "val_config.ini"
