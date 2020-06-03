@@ -176,6 +176,7 @@ class eval_module():
             self.total_losses[loss_name] += loss * np.sum(mask)
         self.total_losses['rmse'] += np.sum(((pred - depth) * mask)**2)
         self.Num_pixels += np.sum(mask)
+        print("RMSE: {}".format(np.sqrt(np.sum(((pred - depth) * mask)**2)/np.sum(mask))) + "\n")
 
 
     def summary_matrices(self):
@@ -239,6 +240,7 @@ class eval_module():
 
             for kk in range(batchsize):
 
+                print(filename[kk] + ' ')
                 out_filename, out_subfolder = self.get_output_file(filename[kk])
                 if not os.path.exists(out_subfolder):
                     os.mkdir(out_subfolder)
@@ -249,6 +251,7 @@ class eval_module():
                 
                 np.save(out_filename, eval_pred)
                 self.calculate_matrices(eval_pred, eval_depth, eval_mask)
+
                 # crop out the boundary region
             self.n_iters += 1
 

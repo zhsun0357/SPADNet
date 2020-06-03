@@ -126,7 +126,7 @@ class SpadDataset(torch.utils.data.Dataset):
             file_nl = re.search('nl\d+.mat', file).group()
             file_nl = file_nl.replace('nl', '')
             file_nl = int(file_nl.replace('.mat', ''))
-            file_idx = file.replace('_nl{}.mat'.format(file_nl), '')
+            file_idx = file.replace('_nl{}'.format(file_nl), '')
 
             if (not (file_idx in self.blacklist)) and (file_nl == self.nl):
                 file = self.spad_datapath + file

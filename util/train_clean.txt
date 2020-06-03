@@ -3101,7 +3101,6 @@ living_room_0087/spad_1161_nl9.mat
 dining_room_0033/spad_1361_nl9.mat
 dining_room_0025/spad_0291_nl9.mat
 living_room_0010/spad_0301_nl9.mat
-living_room_0001a/spad_0001_nl9.mat
 office_0008/spad_0801_nl9.mat
 living_room_0064b/spad_0081_nl9.mat
 study_0003/spad_0031_nl9.mat
@@ -6599,7 +6598,6 @@ dining_room_0036/spad_1831_nl9.mat
 office_0006/spad_0831_nl9.mat
 office_0011/spad_0441_nl9.mat
 dining_room_0037/spad_1181_nl9.mat
-dining_room_0001a/spad_0001_nl9.mat
 living_room_0045/spad_1101_nl9.mat
 home_office_0004/spad_0141_nl9.mat
 office_0014/spad_0341_nl9.mat
