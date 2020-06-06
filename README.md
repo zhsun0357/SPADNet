@@ -6,8 +6,6 @@
 
 Created by Zhanghao Sun, David Brian Lindell, [Olav Solgaard] and [Gordon Wetzstein] from Stanford University.
 
-**We will make code and pre-trained model public soon.**
-
 [Olav Solgaard]: https://solgaardlab.stanford.edu/#research
 [Gordon Wetzstein]: http://www.computationalimaging.org
 
