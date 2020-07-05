@@ -44,6 +44,7 @@ To simulate SPAD measurements, we adapted code from NYUV2 toolkit and code from 
 Our scripts directly load monocular estimation results. We use [DORN] model as monocular estimation network for most part of the work and [here] we provide corresponding estimation results. Users can replace them with any other preliminary depth estimations.
 
 [Lindell et al., 2018]: http://www.computationalimaging.org/publications/single-photon-3d-imaging-with-deep-sensor-fusion/
+[DORN]: https://openaccess.thecvf.com/content_cvpr_2018/html/Fu_Deep_Ordinal_Regression_CVPR_2018_paper.html
 [here]: https://drive.google.com/file/d/1bHpdTCIARwOazWa7Up3o31hrGDmwetj4/view?usp=sharing
 
 ### Model training
